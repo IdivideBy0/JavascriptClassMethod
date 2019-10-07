@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class</h2>
+
+<p>In this example we demonstrate a simple class definition and how to use it.</p>
+
+<p id="demo"></p>
+
+<p id="carstring"></p>
+
+<script>
+
+class Car {
+
+  
+  constructor(brand, year, color) {
+    this.carname = brand;
+    this.year = year;
+    this.color = color;
+  }
+  
+  ChangeColor(clr)
+  {
+  	this.color = clr;
+    return this.color;
+  }
+  
+  PrintCar()
+  {
+  	var str = this.carname + " " + this.year + " " + this.color;
+    return str;
+  }
+  
+}
+
+mycar = new Car("Ford", "2017", "Red");
+
+
+document.getElementById("demo").innerHTML = mycar.carname + " " + mycar.year + " " + mycar.color;
+
+
+mycar.ChangeColor("Purple");
+
+document.getElementById("carstring").innerHTML = mycar.PrintCar();
+
+</script>
+
+
+
+</body>
+</html>
